@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: discord-youtube-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+
+      - key: PREFIX
+        value: ">"
+
+      - key: DEFAULT_VOLUME
+        value: "100"
